@@ -36,7 +36,6 @@ SECRET_KEY = env_list['SECRET_KEY']
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!y11q=@r3^k68sqbu586mmkkh_%n!unvv=j2@xhn(ne1mam%d5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
