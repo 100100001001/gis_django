@@ -21,6 +21,11 @@
         </span>
         {% else %}
         <sapn>
+            <a href="{% url 'accountapp:detail' pk=user.pk %}">
+                MyPage
+            </a>
+        </sapn>
+        <sapn>
             <a href="{% url 'accountapp:logout' %}">
                 Logout
             </a>
