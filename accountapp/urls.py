@@ -7,6 +7,9 @@ app_name = "accountapp"
 
 urlpatterns = [
 
+    path('index/', LoginView.as_view( template_name='accountapp/index.html' ),
+         name='index'),
+
     path('login/', LoginView.as_view(template_name='accountapp/login.html'),
          name='login'),
 
