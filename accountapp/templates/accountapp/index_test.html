@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load bootstrap4 %}
 {% block content %}
 
 <!doctype html>
@@ -23,21 +24,21 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://i.imgur.com/c8PUIac.jpg" class="d-block w-100" class="d-block w-100" alt="...">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Study_%2816840395246%29.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDAzMTVfMiAg/MDAxNTg0MjU5ODgyODcw.-G1wVo44lpNQ5L29GVvo3t1G_yrRBUiUD154AVBz4Aog.JuyXuD9SroMc98Dj57quLT8p5M1A8ofUaE8pxxcmWGIg.JPEG.se___ovo/%25EC%25BB%25B4%25ED%2593%25A8%25ED%2584%25B0%25EB%25B0%25B0%25EA%25B2%25BD%25ED%2599%2594%25EB%25A9%25B4%25EC%259E%2590%25EC%2597%25B005.jpg?type=w800" class="d-block w-100" alt="...">
+          <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/newscms/2018_32/2200771/171024-better-desk-clutter-se-135p.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://c.wallhere.com/photos/26/ee/night_trees_nature_landscape_Yosemite_National_Park_Milky_Way_USA_Half_Dome-125946.jpg!d" class="d-block w-100" alt="...">
+          <img src="https://aldianews.com/sites/default/files/articles/internet_3.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Third slide label</h5>
             <p>Some representative placeholder content for the third slide.</p>
@@ -57,22 +58,23 @@
     {#  Content  #}
     <div class="container">
         <div class="row my-5">
-            <div class="col-7">
+            <div class="col-9">
                 <a href="{% url 'articleapp:list' %}">
                     <h2>Lorem Ipsum</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et dui eget erat cursus tristique. Nam sodales iaculis nibh, vel ullamcorper lorem fermentum ac. Fusce maximus neque ac nulla porta, vitae aliquet tortor feugiat.</p>
                 </a>
             </div>
-            <div class="col-5">
-                <img src="https://post-phinf.pstatic.net/MjAxOTA2MThfMjEg/MDAxNTYwODQ4MjQxNTk0.vEXD42hxZBN_f9N__UUj9Vb6JKw6Z2TIOsc9rcn_ETog.Mp51nbRhHdsavQ8IZzK7nR6vHQX_x0UpWx-roNfFOsEg.JPEG/milky-way-984286_1280.jpg?type=w1200" alt="" class="w-100">
+            <div class="col-3">
+                <img src="https://image.flaticon.com/icons/png/512/912/912633.png" alt="" class="w-50">
             </div>
         </div>
         <hr>
         <div class="row my-5">
-            <div class="col-5">
-                <img src="https://www.wallpapertip.com/wmimgs/91-919739_space-wallpaper-4k-high-resolution.jpg" alt="" class="w-100">
+            <div class="col-3">
+                <img src="data:image/png;base64,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"
+                     alt="" class="w-50">
             </div>
-            <div class="col-7">
+            <div class="col-9">
                 <a href="{% url 'articleapp:list' %}">
                     <h2>Lorem Ipsum</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et dui eget erat cursus tristique. Nam sodales iaculis nibh, vel ullamcorper lorem fermentum ac. Fusce maximus neque ac nulla porta, vitae aliquet tortor feugiat.</p>
@@ -81,14 +83,14 @@
         </div>
         <hr>
         <div class="row my-5"">
-            <div class="col-7">
+            <div class="col-9">
                 <a href="{% url 'articleapp:list' %}">
                     <h2>Lorem Ipsum</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et dui eget erat cursus tristique. Nam sodales iaculis nibh, vel ullamcorper lorem fermentum ac. Fusce maximus neque ac nulla porta, vitae aliquet tortor feugiat.</p>
                 </a>
             </div>
-            <div class="col-5">
-                <img src="https://p4.wallpaperbetter.com/wallpaper/817/916/889/falcon-9-rocket-4k-high-definition-wallpaper-preview.jpg" alt="" class="w-100">
+            <div class="col-3">
+                <img src="https://cdn.pixabay.com/photo/2019/01/01/14/55/calendar-3906791_1280.jpg" alt="" class="w-50">
             </div>
         </div>
     </div>
