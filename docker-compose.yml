@@ -14,12 +14,26 @@ services:
       - hehe_media:/data/media/
 
   django:
-    image: hehe:3
+    image: hehe:4
     networks:
       - hehe_network
     volumes:
       - hehe_static:/home/gis_django/staticfiles/
       - hehe_media:/home/gis_django/media/
+    secrets:
+      - DJANGO_SECRET_KEY
+
+  mariadb:
+    image: mariadb:10.5
+    networks:
+      - hehe_network
+    volumes:
+      - hehe_mariadb:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: pass1234
+      MARIADB_DATABASE: django
+      MARIADB_USER: django
+      MARIADB_PASSWORD: pass1234
 
 networks:
   hehe_network:
@@ -27,3 +41,8 @@ networks:
 volumes:
   hehe_static:
   hehe_media:
+  hehe_mariadb:
+
+secrets:
+  DJANGO_SECRET_KEY:
+    external: true
