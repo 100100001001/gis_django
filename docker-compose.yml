@@ -14,7 +14,7 @@ services:
       - hehe_media:/data/media/
 
   django:
-    image: hehe:4
+    image: hehe:5
     networks:
       - hehe_network
     volumes:
